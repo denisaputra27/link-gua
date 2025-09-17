@@ -2,74 +2,87 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Link Gua</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
-      overflow: hidden;
-    }
-    /* Video Background */
+    /* Style video background */
     .bg-video {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: cover; /* auto crop biar rapi di HP */
       z-index: -1;
     }
-    h1 {
-      margin-top: 30px;
-      text-shadow: 0 0 5px black;
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
     }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 6vw; /* responsive text */
+      text-shadow: 2px 2px 5px black;
+    }
+
     .link {
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 15px auto;
       padding: 15px;
-      width: 250px;
+      width: 80%;
+      max-width: 300px;
       background: rgba(0,0,0,0.6);
-      border-radius: 10px;
+      border-radius: 12px;
       text-decoration: none;
       color: white;
       font-weight: bold;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      transition: 0.2s;
-      font-size: 18px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+      transition: 0.3s;
+      font-size: 4.5vw; /* responsive font */
     }
+
     .link i {
       margin-right: 10px;
-      font-size: 20px;
+      font-size: 5vw;
     }
+
     .link:hover {
       background: rgba(255,255,255,0.2);
       transform: scale(1.05);
+    }
+
+    /* biar font ga terlalu gede di laptop */
+    @media (min-width: 768px) {
+      h1 { font-size: 40px; }
+      .link { font-size: 18px; }
+      .link i { font-size: 20px; }
     }
   </style>
 </head>
 <body>
   <!-- Video background -->
   <video autoplay muted loop class="bg-video">
-    <source src="bg.mp4.mp4" type="video/mp4">
+    <source src="893d94cc65eb9e202606d0b2c0396b2d.mp4" type="video/mp4">
   </video>
 
-  <h1>Bantu Gua di Sini</h1>
+  <h1>Bantu gua di sini</h1>
 
   <a class="link" href="https://www.tiktok.com/@xeee_88?is_from_webapp=1&sender_device=pc" target="_blank">
-    <i class="fab fa-tiktok"></i> xeee_88
+    <i class="fab fa-tiktok"></i> TikTok
   </a>
   <a class="link" href="https://youtube.com/@cosamp?si=QtQ3DU7AgpJGr2_D" target="_blank">
-    <i class="fab fa-youtube"></i> cosamp
+    <i class="fab fa-youtube"></i> YouTube
   </a>
   <a class="link" href="https://www.tiktok.com/link/v2?aid=1988&lang=id-ID&scene=bio_url&target=https%3A%2F%2Fsaweria.co%2Fdenn1717" target="_blank">
-    <i class="fa-solid fa-hand-holding-dollar"></i> donate
+    <i class="fa-solid fa-hand-holding-dollar"></i> Saweria
   </a>
   <a class="link" href="https://discord.gg/U95626z5" target="_blank">
     <i class="fab fa-discord"></i> Discord
